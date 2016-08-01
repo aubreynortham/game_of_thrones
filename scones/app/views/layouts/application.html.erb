@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>House of Scones</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>House of Scones</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <link href='https://fonts.googleapis.com/css?family=Josefin+Slab:400,700' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
-    <%= yield %>
-  </body>
+<body>
+  <h1>• House of Scones •</h1>
+  <nav>
+    <a href="/houses">View Houses   •   </a>
+    <a href="/houses/new">Create New House   •   </a>
+    <a href="/scones">View Scones   •   </a>
+    <a href="/scones/new">Create New Scone</a>
+  </nav>
+  <%= yield %>
+</body>
 </html>

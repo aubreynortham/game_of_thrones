@@ -1,0 +1,7 @@
+<h2><%= @house.name %> Menu</h2>
+<% @house.scones.each do |scone| %>
+<div class='houses'>
+  <h3><%= link_to scone.name, scone %></h3>
+  <img class="scone_pics" src="<%= scone.img_url %>">
+</div>
+<% end %>

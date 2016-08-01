@@ -1,15 +1,59 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+body {
+  background-color: rgb(186, 249, 226);
+}
+.scone_pics {
+  width: 400px;
+  height: auto;
+  border: 20px solid white;
+  border-style: groove;
+  margin: auto;
+  display: block;
+}
+.house_pics {
+  height: 400px;
+  width: 500px;
+  border: 20px solid rgba(20, 179, 93, 0.72);
+  border-style: groove;
+  display: block;
+  margin: 20px;
+}
+.houses, .scones {
+  display: inline-block;
+  width: 600px;
+  margin: auto;
+  text-align: center;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+h1, h2 {
+  font-family: 'Josefin Slab', serif;
+  font-weight: 700;
+  font-variant: small-caps;
+  color: rgb(20, 179, 93);
+  text-align: center;
+}
+h3 {
+  font-family: 'Josefin Slab', serif;
+  font-weight: 700;
+  font-size: 2em;
+  text-align: center;
+}
+h1 {
+  font-size: 5em;
+  border-bottom: 10px solid rgb(71, 133, 79);
+}
+h2 {
+  font-size: 3em;
+}
+nav a {
+  font-family: 'Josefin Slab', serif;
+  font-weight: 400;
+  color: rgb(75, 133, 90);
+  font-size: 1.25em;
+  display: inline-block;
+}
+nav {
+  text-align: center;
+}

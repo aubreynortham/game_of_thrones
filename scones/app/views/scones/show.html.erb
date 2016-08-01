@@ -1,0 +1,5 @@
+<h2><%= @scone.name %></h2>
+
+<h3>From the House of: <%= link_to @scone.house.name, house_path(@scone.house) %></h3>
+<h3>Flavor: <%= @scone.flavor %></h3>
+<img class="scone_pics" src="<%= @scone.img_url %>"/>
