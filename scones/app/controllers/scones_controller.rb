@@ -1,0 +1,3 @@
+class SconesController < ApplicationController
+
+end
