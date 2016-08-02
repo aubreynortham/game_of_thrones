@@ -57,3 +57,36 @@ nav a {
 nav {
   text-align: center;
 }
+button {
+  display: block;
+  text-align: center;
+  margin: 20px auto;
+  padding: 10px;
+  font-family: 'Josefin Slab', serif;
+  font-weight: 700;
+  font-variant: small-caps;
+  font-size: 1em;
+  color: white;
+  background-color: rgb(75, 133, 90);
+}
+form {
+  margin: auto;
+  text-align: center;
+  font-family: 'Josefin Slab', serif;
+  font-weight: 400;
+  font-size: 1.25em;
+  color: white;
+  background-color: rgb(75, 133, 90);
+  padding: 20px;
+  margin: 0px 50px;
+  border: 8px solid rgba(20, 179, 93, 0.72);
+  border-style: groove;
+}
+input {
+  padding: 5px 20px;
+}
+p {
+  color: red;
+  text-align: center;
+  text-transform: uppercase;
+}

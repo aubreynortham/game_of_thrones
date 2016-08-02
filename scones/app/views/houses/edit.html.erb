@@ -1,0 +1,6 @@
+<h2>Edit This House: </h2>
+<%= render 'form' %>
+
+<button><%= link_to "Demolish this House", house_path(@house),
+        method: :delete,
+        data:{confirm: "ARE YOU SURE?"} %></button>
