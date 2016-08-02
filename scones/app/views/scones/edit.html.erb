@@ -1,6 +1,6 @@
 <h2>Edit Scone: </h2>
 <%= render 'form' %>
 
-<button><%= link_to "Trash this Scone", scone_path(@scone),
+<button><%= link_to "Trash this Scone", house_scone_path(@scone),
         method: :delete,
         data:{confirm: "ARE YOU SURE?"} %></button>

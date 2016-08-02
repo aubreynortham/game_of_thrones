@@ -1,8 +1,0 @@
-<h2>Scones</h2>
-<% @scones.each do |scone| %>
-
-<h3>
-  <%= link_to scone.name, scone_path(scone) %> | <%= link_to scone.house.name, house_path(scone.house) %>
-</h3>
-
-<% end %>

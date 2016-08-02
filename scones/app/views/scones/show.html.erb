@@ -1,7 +1,10 @@
 <h2><%= @scone.name %></h2>
-<button><%= link_to "Edit Scone", edit_scone_path(@scone) %></button>
-
 
 <h3>From the House of: <%= link_to @scone.house.name, house_path(@scone.house) %></h3>
 <h3>Flavor: <%= @scone.flavor %></h3>
 <img class="scone_pics" src="<%= @scone.img_url %>"/>
+
+<button><%= link_to "Edit this Scone", edit_house_scone_path(@scone.house, @scone) %></button>
+<button><%= link_to "Trash this Scone", house_scone_path(@scone),
+method: :delete,
+data:{confirm: "ARE YOU SURE?"} %></button>

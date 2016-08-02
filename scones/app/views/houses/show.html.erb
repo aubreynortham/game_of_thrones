@@ -1,9 +1,10 @@
 <h2><%= @house.name %> Menu</h2>
 <button><%= link_to "Edit this House", edit_house_path(@house) %></button>
+<button><%= link_to "Create New Scone", new_house_scone_path(@house) %></button>
 
 <% @house.scones.each do |scone| %>
 <div class='houses'>
-  <h3><%= link_to scone.name, scone %></h3>
+  <h3><%= link_to "#{scone.name}", house_scone_path(@house, scone) %></h3>
   <img class="scone_pics" src="<%= scone.img_url %>">
 </div>
 <% end %>

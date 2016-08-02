@@ -1,45 +1,54 @@
 class SconesController < ApplicationController
 
   def index
+    @house = House.find(params[:house_id])
+    @scones = @house.scones
+  end
+  def all_scones
     @scones = Scone.all
   end
 
-  def show
-    @scone = Scone.find(params[:id])
+  def new
+    @house = House.find(params[:house_id])
+    @scone = @house.scones.new
   end
 
-  def new
-    @scone = Scone.new
+  def show
+    @house = House.find(params[:house_id])
+    @scone = Scone.find(params[:id])
   end
 
   def create
-    @scone = Scone.create(scone_params)
+    @house = House.find(params[:house_id])
+    @scone = @house.scones.create(scone_params)
+
     if @scone.save
-      redirect_to @scone, notice: "New Scone was successfully created."
+      redirect_to @house, notice: "New Scone was successfully created."
     else
-      render :new
+      render "houses/show"
     end
   end
 
-  def destroy
-    @scone = Scone.find(params[:id])
-    @scone.destroy
-    redirect_to scones_path
-  end
-
   def edit
-    @scone = Scone.find(params[:id])
+    @house = House.find(params[:house_id])
+    @scone = @house.scones.find(params[:id])
   end
 
   def update
     @scone = Scone.find(params[:id])
     @scone.update(scone_params)
-    redirect_to @scone
+    redirect_to house_scone_path(@scone.house, @scone)
+  end
+
+  def destroy
+    @scone = Scone.find(params[:id])
+    @scone.destroy
+    redirect_to houses_path
   end
 
   private
   def scone_params
-    params.require(:scone).permit(:name, :flavor, :img_url, :house)
+    params.require(:scone).permit(:name, :flavor, :img_url)
   end
 
 end
